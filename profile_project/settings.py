@@ -94,7 +94,9 @@ WSGI_APPLICATION = 'profile_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {'default': env.db(), 'OPTIONS': {'charset': 'utf8mb4'}}
+DATABASES = {'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase'}}
 
 AUTH_USER_MODEL = 'userprofile.User'
 
